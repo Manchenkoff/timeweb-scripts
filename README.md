@@ -9,6 +9,9 @@ chmod +x bin/*
 ```
 
 **aliases** - system apps aliases setup
+
 **composer_install** - install local 'composer.phar' file
+
 **git_setup.py** - setup basic user info for Github
+
 **host.py** - host & project management tool
