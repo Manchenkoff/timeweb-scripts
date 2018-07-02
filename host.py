@@ -111,8 +111,7 @@ def action_link():
 			if os.path.islink(dest) or os.path.isfile(dest):
 				os.remove(dest)
 			elif os.path.isdir(dest):
-				import shutil
-				shutil.rmtree(dest)
+				os.rename(dest, dest + '_old')
 				
 		os.symlink(project, dest, target_is_directory=True)
 	except:
