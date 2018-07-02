@@ -3,7 +3,7 @@
 import sys
 import os
 
-HOME = '/home/m/manchenko7'
+HOME = os.path.expanduser('~')
 PRODUCTION = os.path.join(HOME, 'production')
 
 def get_projects_dict():
