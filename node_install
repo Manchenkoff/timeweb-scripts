@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tar xf node.tar.gz
+mv node-v10.6.0-linux-x64/ nodejs
