@@ -6,12 +6,16 @@ Run these commands to install scripts on Your host (from home directory)
 ```
 git clone https://github.com/manchenkoff/timeweb-scripts ./bin
 chmod +x bin/*
+./bin/aliases
+./bin/node_install
 ```
 
-**aliases** - system apps aliases setup
+**aliases** - system apps aliases setup (php7, node, npm)
 
 **composer_install** - install local 'composer.phar' file
 
-**git_setup.py** - setup basic user info for Github
+**git_config** - setup basic user info for Github
 
-**host.py** - host & project management tool
+**host** - host & project management tool
+
+**node_install** - unpack and setup NodeJS
