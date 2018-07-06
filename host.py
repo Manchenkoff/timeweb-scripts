@@ -76,9 +76,12 @@ def action_create():
 		os.mkdir(PRODUCTION)
 	
 	command = "git clone {} {}".format(source, dest)
-	os.system(command)
 	
-	print('\nProject was created!')
+	if (input('Are You sure? [y/n] >>> ')[0]).lower() == 'y':
+		os.system(command)
+		print('\nProject was created!')
+	else:
+		print('\nCanceled!')
 	
 def action_update():
 	"""Downloads all updates of project from Github"""
@@ -104,20 +107,23 @@ def action_link():
 	project = select_directory('project')
 	host = select_directory('host')
 	
-	try:
-		dest = os.path.join(host, 'public_html')
-		
-		if os.path.exists(dest):
-			if os.path.islink(dest) or os.path.isfile(dest):
-				os.remove(dest)
-			elif os.path.isdir(dest):
-				os.rename(dest, dest + '_old')
-				
-		os.symlink(project, dest, target_is_directory=True)
-	except:
-		print("Can't create a symlink")
-		
-	print('\nProject linked!')
+	if (input('Are You sure? [y/n] >>> ')[0]).lower() == 'y':
+		try:
+			dest = os.path.join(host, 'public_html')
+			
+			if os.path.exists(dest):
+				if os.path.islink(dest) or os.path.isfile(dest):
+					os.remove(dest)
+				elif os.path.isdir(dest):
+					os.rename(dest, dest + '_old')
+					
+			os.symlink(project, dest, target_is_directory=True)
+		except:
+			print("Can't create a symlink")
+			
+		print('\nProject linked!')
+	else:
+		print('\nCanceled!')
 	
 def action_help():
 	"""Shows help message with actions description"""
