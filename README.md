@@ -10,7 +10,7 @@ chmod +x bin/*
 ./bin/node_install
 ```
 
-**aliases** - system apps aliases setup (php7, node, npm)
+**aliases** - system apps aliases setup (node, npm)
 
 **composer_install** - install local 'composer.phar' file
 
