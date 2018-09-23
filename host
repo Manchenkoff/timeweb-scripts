@@ -39,12 +39,12 @@ def select_directory(dir_type):
 		print('--- PROJECTS LIST ---\n')
 		
 		items = get_projects_dict()
-		names = list(items)
+		names = sorted(list(items))
 	elif dir_type == 'host':
 		print('--- HOSTS LIST ---\n')
 		
 		items = get_hosts_dict()
-		names = list(items)
+		names = sorted(list(items))
 	
 	for index, item in enumerate(names):
 		print("[{}] {}".format(index, item))
