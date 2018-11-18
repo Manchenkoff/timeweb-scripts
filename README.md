@@ -14,8 +14,6 @@ chmod +x bin/*
 
 **composer_install** - install local 'composer.phar' file
 
-**git_config** - setup basic user info for Github
-
 **host** - host & project management tool
 
 **node_install** - unpack and setup NodeJS
