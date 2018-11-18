@@ -12,8 +12,6 @@ chmod +x bin/*
 
 **aliases** - system apps aliases setup (node, npm)
 
-**composer_install** - install local 'composer.phar' file
-
 **host** - host & project management tool
 
 **node_install** - unpack and setup NodeJS
