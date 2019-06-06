@@ -1,17 +1,25 @@
-# timeweb-scripts
-A few scripts for managing Timeweb hosting
+# TimeWeb Deploy Manager script
 
-Run these commands to install scripts on Your host (from home directory)
+## Установка
+
+Для установки скрипта на хостинг нужно выполнить
 
 ```
-git clone https://github.com/manchenkoff/timeweb-scripts ./bin
-chmod +x bin/*
-./bin/aliases
-./bin/node_install
+git clone https://github.com/manchenkoff/timeweb-manager ./bin
+mv ./bin/manager.py ./manager.py
+rm -r ./bin
 ```
 
-**aliases** - system apps aliases setup (node, npm)
+После чего можно использовать скрипт:
 
-**host** - host & project management tool
+```
+python manager.py [тип операции]
+```
 
-**node_install** - unpack and setup NodeJS
+## Доступные операции
+
+- **help**: показать справку по командам
+- **node**: выполнить установку Node.js и зарегистрировать alias для запуска node, npm
+- **clone**: загрузить проект из репозитория Github
+- **link**: привязать проект Github к сайту TimeWeb
+- **update**: загрузить обновления из репозитория Github
